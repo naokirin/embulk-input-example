@@ -1,0 +1,15 @@
+in:
+  type: example
+  count: 2
+  inputs:
+    - [ "bob", 19 ]
+    - [ "alice", 18 ]
+  columns:
+    - { name: name, type: string }
+    - { name: age, type: long }
+out:
+  type: command
+  command: "cat - > '/workdir/output.txt'"
+  formatter:
+    type: fast_jsonl
+
